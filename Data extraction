@@ -1,0 +1,65 @@
+library(sp)
+library(ncdf4)
+library(raster)
+library(yaImpute)
+library(rgdal)
+
+
+########### Extract Data from NC file ###############################################
+for(f in 1:length(fl)) {
+  pre<-brick(fl[f],stopIfNotEqualSpaced = FALSE,varnames="ssrd")
+  bb <- mask(pre, shp)
+  dat<-rasterToPoints(bb)
+  if(f==1) Dat<-dat
+  if(f>1) Dat<-cbind(Dat, dat[,3:ncol(dat)])
+  print(f)
+}
+
+
+f########### Extract Data from NC file ###############################################
+for(f in 1:length(fl)) {
+  pre<-brick(fl[f],stopIfNotEqualSpaced = FALSE, varnames='t2m')
+  bb <- mask(pre, shp)
+  dat<-rasterToPoints(bb)
+  if(f==1) Dat<-dat
+  if(f>1) Dat<-cbind(Dat, dat[,3:ncol(dat)])
+  print(f)
+}
+
+#T2M
+tDat<-t(Dat[,3:ncol(Dat)]) #Transpose
+Ta<-tDat-273.15 #Kelvin to Celcius
+setwd("D:\\masters\\results")
+write.csv(round(Ta,"Ta1941-2020.csv"),1)
+
+
+f########### Extract Data from NC file ###############################################
+for(f in 1:length(fl)) {
+  pre<-brick(fl[f],stopIfNotEqualSpaced = FALSE, varname="u10")
+  bb <- mask(pre, shp)
+  dat<-rasterToPoints(bb)
+  if(f==1) Dat<-dat
+  if(f>1) Dat<-cbind(Dat, dat[,3:ncol(dat)])
+  print(f)
+}
+uDat<-t(Dat[,3:ncol(Dat)]) #Transpose u-comp
+
+
+for(f in 1:length(fl)) {
+  pre<-brick(fl[f],stopIfNotEqualSpaced = FALSE, varname="v10")
+  bb <- mask(pre, shp)
+  dat<-rasterToPoints(bb)
+  if(f==1) Dat<-dat
+  if(f>1) Dat<-cbind(Dat, dat[,3:ncol(dat)])
+  print(f)
+}
+vDat<-t(Dat[,3:ncol(Dat)]) #Transpose u-comp
+
+UDat<-(uDat^2+vDat^2)^0.5 # Resultant wind speed
+WS <- UDat*(4.87/(log(678-5.42))) #10m to 2m
+
+setwd("D:\\masters\\results")
+write.csv(round(WS,"WS1941-2020.csv"),1)
+
+##########################################################
+
