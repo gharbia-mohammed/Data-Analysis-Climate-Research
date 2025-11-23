@@ -1,0 +1,106 @@
+
+# temporal Analysis for temperature,wind speed & solar irradiance usin R programming language
+ssrd<-read.csv("SSRD1941-2020.csv")[,-1]
+ta<-read.csv("ta1941-2020.csv")[,-1]
+WS<-read.csv("WS1941-2020.csv")[,-1]
+pv<-read.csv("pv_potential.csv")[,-1]
+
+# Create the new annual data tables
+annual_data <- annual_ssrd <- annual_ta <- annual_ws <- matrix(nrow = 80, ncol = ncol(pv))
+
+# Loop over the number of years and calculate the average for every 12 rows
+for (i in 1:80) {
+  start_row <- (i - 1) * 12 + 1
+  end_row <- i * 12
+   annual_ssrd[i, ] <- colMeans(ssrd[start_row:end_row, ])
+  annual_ta[i, ] <- colMeans(ta[start_row:end_row, ])
+  annual_ws[i, ] <- colMeans(WS[start_row:end_row, ])
+  print(i)
+}
+
+# Optionally, add row names for the years (1941, 1942, ..., 2020)
+rownames(annual_data) <- seq(1941, 2020)
+rownames(annual_ssrd) <- seq(1941, 2020)
+rownames(annual_ta) <- seq(1941, 2020)
+rownames(annual_ws) <- seq(1941, 2020)
+
+temporal_annual<-rowMeans(annual_data)
+temporal_ssrd<-rowMeans(annual_ssrd)
+temporal_ta<-rowMeans(annual_ta)
+temporal_ws<-rowMeans(annual_ws)
+
+years <- 1941:2020
+
+setwd("D:\\masters\\Figures")
+
+#Plot
+
+png("pv_potential_plot.png", width = 7, height = 5, units = "in", res = 300)
+par(mfrow = c(1, 1))
+# Plotting the data
+plot(years, temporal_annual*100, type = "l", col = "darkblue", lwd = 2, 
+     xlab = NA, ylab = "PV Potential (%)",
+     #main = "Annual PV Potential from 1940 to 2020",
+     ylim = c(24.5, 26),
+     cex.axis = 1.5, cex.lab = 1.5)  # Increase font size for axis and labels
+
+# Customize x-axis to match 1940 to 2020
+# axis(1, at = seq(1940, 2020, by = 10))  # Set ticks at every 10 years
+# axis(2, at = seq(24.5, 26, by = 0.5))
+
+# Save and close the PNG file
+dev.off()
+
+plot(temporal_annual)
+
+
+# Plot SSRD
+setwd("D:\\masters\\Figures")
+
+
+png("ssrd_plot.png", width = 9, height = 5, units = "in", res = 300)
+par(mfrow = c(1, 1))  # Reset to a single plot layout
+plot(years, temporal_ssrd, type = "l", col ="darkblue", lwd = 2, 
+     xlab = NA, ylab = "SSRD (Wh/m²)",
+     ylim = range(temporal_ssrd),  # Automatically adjust y-axis range
+     cex.axis = 1.5, cex.lab = 1.5)  # Increase font size for axis and labels
+dev.off()
+
+
+
+# Plot Temperature (ta)
+
+setwd("D:\\masters\\Figures")
+
+png("ta_plot.png", width = 9, height = 5, units = "in", res = 300)
+par(mfrow = c(1, 1))  # Reset to a single plot layout
+plot(years, temporal_ta, type = "l", col = "darkblue", lwd = 2, 
+     xlab = NA, ylab = "TAS(°C)",
+     ylim = range(temporal_ta),  # Automatically adjust y-axis range
+     cex.axis = 1.5, cex.lab = 1.5)  # Increase font size for axis and labels
+dev.off()
+
+
+
+
+
+
+
+
+# Plot Wind Speed (ws)
+
+setwd("D:\\masters\\Figures")
+
+# Plot Wind Speed (ws)
+
+png("ws_plot.png", width = 9, height = 5, units = "in", res = 300)
+par(mfrow = c(1, 1))  # Reset to a single plot layout
+plot(years, temporal_ws, type = "l", col = "darkblue", lwd = 2, 
+     xlab = NA, ylab = "ws(m/s)",
+     ylim = range(temporal_ws),  # Automatically adjust y-axis range
+     cex.axis = 1.5, cex.lab = 1.5)  # Increase font size for axis and labels
+
+
+dev.off()
+
+#############################################################
