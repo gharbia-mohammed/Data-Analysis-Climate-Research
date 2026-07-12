@@ -8,14 +8,21 @@
 - [Exploratory Data Analysis](#exploratory-data-analysis)
 - [Results / Findings](#results--findings)
 - [Recommendations](#recommendations)
-Project Overview
-Data Source
-Tech Stack
-Data Preparation
-Exploratory Data Analysis
-Seasonality Analysis
-Key Findings
-Conclusion
+## Project Overview
+
+## Data Source
+
+## Tech Stack
+
+## Data Preparation
+
+## Exploratory Data Analysis
+
+## Seasonality Analysis
+
+## Key Findings
+
+## Conclusion
 
 ### Project Overview
 
