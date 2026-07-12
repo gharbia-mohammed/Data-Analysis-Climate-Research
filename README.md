@@ -16,9 +16,9 @@
 This project analyzes the long-term climate variability in North Africa from 1941 to 2020 using the ERA5 reanalysis dataset. 
 The project focuses on the three main meteorological variables that directly influence renewable energy systems and heat stress in desert environments:
 
-- Air Temperature (TAS)
+- Temperature T(°c)
 - Wind Speed (WS)
-- Surface Downwelling Shortwave Radiation (RSDS)
+- Surface Downwelling Shortwave Radiation (SSRD)
 The main objective is to understand how these variables evolved over eight decades and identify long-term trends and seasonal patterns using data analysis and visualization techniques.
 
 ### Data sources :
@@ -85,14 +85,14 @@ The project includes:
 
 3.Climate indicators visualization.
 
-4.Long-term trends for TAS, WS, RSDS
+4.Long-term trends for T(°c), WS, SSRD
 
 ### Seasonality Analysis
 
 Seasonal patterns were analyzed for all climate variables to understand how climate conditions change throughout the year.
 The analysis focuses on:
 
-# Air Temperature (TAS)
+# Air Temperature T(°c)
 Monthly temperature distribution.
 Comparison between 1941–1980 and 1981–2020.
 Identification of warming patterns across seasons.
@@ -100,7 +100,7 @@ Identification of warming patterns across seasons.
 Monthly wind variability.
 Seasonal peaks and low-wind periods.
 Changes between the two historical periods.
-# Surface Solar Radiation (RSDS)
+# Surface Solar Radiation (SSRD)
 Seasonal behavior of solar radiation.
 Monthly differences across decades.
 Identification of periods with the highest solar potential.
@@ -114,7 +114,7 @@ Which variable shows the largest seasonal variation
 
 ## Key Findings
 
-### 1. Air Temperature (TAS)
+### 1.Temperature T(°c)
 
 - Temperature increased from **21.25°C in 1943** to **24.8°C in 2020**, indicating a clear warming trend across North Africa.
 
@@ -131,7 +131,7 @@ Which variable shows the largest seasonal variation
 
 ---
 
-### 3. Solar Irradiance (RSDS)
+### 3. Solar Irradiance (SSRD)
 
 - Annual solar irradiance ranged from **255.5 to 265 Wh/m²**.
 - The highest values occurred in the early **1940s**, while the lowest values were observed in the **mid-1970s**.
@@ -141,7 +141,7 @@ Which variable shows the largest seasonal variation
 
 ---
 
-### 4. Monthly Temperature Climatology (TAS)
+### 4. Monthly Temperature Climatology T(°c)
 
 - Monthly temperatures were compared between **1941–1980** and **1981–2020**.
 - Temperatures increased across all months during the recent period.
@@ -163,7 +163,7 @@ Which variable shows the largest seasonal variation
 
 ---
 
-### 6. Monthly Solar Radiation Climatology (RSDS)
+### 6. Monthly Solar Radiation Climatology (SSRD)
 
 - Solar radiation exhibited a clear seasonal cycle.
 - Peak values occurred between **May and July**, while the lowest values were observed during **December** and **January**.
@@ -175,5 +175,4 @@ Which variable shows the largest seasonal variation
 ## Conclusion
 
 Using 80 years of climate data, this project applied time-series analysis, seasonal comparisons, and data visualization to identify long-term trends in North Africa.
-
 The results show increasing temperatures, seasonal changes in wind speed, and relatively stable solar radiation patterns. These insights highlight the value of data analytics in understanding climate variability and supporting decisions in renewable energy and environmental planning.
