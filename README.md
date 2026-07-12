@@ -118,7 +118,7 @@ Which variable shows the largest seasonal variation
 
 - Temperature increased from **21.25°C in 1943** to **24.8°C in 2020**, indicating a clear warming trend across North Africa.
 
-<img width="600" height="300" alt="ta_plot" src="https://github.com/user-attachments/assets/89e22cb5-3def-49d7-9956-558e4c07bb20" />
+<img width="600" height="300" alt="ta_plot" src="https://github.com/user-attachments/assets/85a35926-eed0-43a1-af66-8607824efadf" />
 
 ---
 
@@ -126,8 +126,8 @@ Which variable shows the largest seasonal variation
 
 - Wind speeds ranged from **1.65 to 2.7 m/s** over the study period.
 - The highest values occurred in **1943** and **2000**, while the lowest values were recorded in **1958** and **1962**.
-
-<img width="600" height="300" alt="ws_plot" src="https://github.com/user-attachments/assets/67bfee22-078a-4c55-ac30-ea442edb1229" />
+- 
+<img width="600" height="300" alt="ws_plot" src="https://github.com/user-attachments/assets/ba35ee71-4452-499a-bae7-d437c53ad2ce" />
 
 ---
 
@@ -137,7 +137,7 @@ Which variable shows the largest seasonal variation
 - The highest values occurred in the early **1940s**, while the lowest values were observed in the **mid-1970s**.
 - The overall trend shows a slight decline over the 80-year period.
 
-<img width="600" height="300" alt="ssrd_plot" src="https://github.com/user-attachments/assets/fd0d6dfb-7175-4995-bf41-83df2a9e942a" />
+<img width="600" height="300" alt="ssrd_plot" src="https://github.com/user-attachments/assets/d9a587b4-d32a-46b3-b277-2dc4c4b27a99" />
 
 ---
 
@@ -148,7 +148,7 @@ Which variable shows the largest seasonal variation
 - Summer months (**June–August**) recorded the highest temperatures, while **January** and **February** remained the coolest months.
 - The largest increase occurred in **July**, reaching approximately **1°C**, whereas the smallest change was observed in **February**.
 
-*(Insert temperature seasonality figure here.)*
+<img width="600" height="300" alt="ta_monthly_comparison" src="https://github.com/user-attachments/assets/c3835c5c-8ed1-40bc-a5b9-268614de24c7" />
 
 ---
 
@@ -159,7 +159,7 @@ Which variable shows the largest seasonal variation
 - More pronounced changes were observed during winter.
 - The largest increase occurred in **October** and **December**, reaching approximately **0.2 m/s**.
 
-*(Insert wind seasonality figure here.)*
+<img width="600" height="300" alt="ws_monthly_comparison" src="https://github.com/user-attachments/assets/4dab5ff9-cf72-4d55-b4c7-1f7a245596a8" />
 
 ---
 
@@ -170,8 +170,7 @@ Which variable shows the largest seasonal variation
 - Solar radiation patterns remained largely stable between the two periods.
 - Only a slight decrease was observed in **May**.
 
-*(Insert solar radiation seasonality figure here.)*
-
+<img width="600" height="300" alt="ssrd_monthly_comparison" src="https://github.com/user-attachments/assets/a61a2e1e-7dc2-4fab-a727-e96b1eddbb58" />
 
 ## Conclusion
 
