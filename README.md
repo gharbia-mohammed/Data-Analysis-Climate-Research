@@ -1,4 +1,4 @@
-# Data Analysis Climate Research
+# # Climate Data Analytics Project 
 
 ## Table of Contents
 - [Project Overview](#project-overview)
@@ -14,30 +14,40 @@
 ### Project Overview
 
 This project analyzes the long-term climate variability in North Africa from 1941 to 2020 using the ERA5 reanalysis dataset. 
-The study focuses on the three main meteorological variables that directly influence renewable energy systems and heat stress in desert environments:
+The project focuses on the three main meteorological variables that directly influence renewable energy systems and heat stress in desert environments:
 
-Air Temperature (TAS) , Wind Speed (WS) , Surface Downwelling Shortwave Radiation (RSDS)
-The goal is to investigate how these variables have changed over the last eight decades 
-and identify key temporal patterns that describe North Africa’s climate change.
-
+- Air Temperature (TAS)
+- Wind Speed (WS)
+- Surface Downwelling Shortwave Radiation (RSDS)
+The main objective is to understand how these variables evolved over eight decades and identify long-term trends and seasonal patterns using data analysis and visualization techniques.
 
 ### Data sources :
 
 The  dataset used in this project is the ERA5 Reanalysis Dataset (ECMWF), which provides global coverage, 
-hourly and monthly data, and a high spatial resolution of 0.25° × 0.25° for the period from 1940 to 2020. 
+hourly and monthly data, and a high spatial resolution of 0.25° × 0.25° for the period from 1940-2020. 
 ERA5 is widely used in climate analysis due to its spatial consistency, long historical coverage, 
 and high-quality integration of atmospheric observations.
+ERA5 provides reliable historical climate records and is widely used for environmental and energy analysis.
 
-### Tools Used :
-R Programming Language in :
-Data Extraction (Extracting ERA5 climate variables)
-Data Cleaning & Preprocessing
-Time-Series Analysis
-Statistical Summaries
-Climatological Calculations (monthly/annual means,  trends)
-Data Visualization (ggplot2 for time-series and monthly climatology plots)
+### Tech stack :
 
+### Programming & Analysis
 
+- R
+- ggplot2
+- dplyr
+- raster
+- ncdf4
+  
+### Tasks Performed
+
+- Data extraction
+- Data cleaning
+- Feature preparation
+- Time-series analysis
+- Seasonal analysis
+- Statistical summaries
+- Data visualization
 
 ### Data cleaning / preperation :
 
@@ -45,9 +55,9 @@ Data Visualization (ggplot2 for time-series and monthly climatology plots)
 <br><br>
 2. Selecting the North Africa domain
 <br><br>
-3. Handling missing values (rare in ERA5)
+3. Handling missing values 
 <br><br>
-4. Computing annual and monthly averages
+4. Calculating annual and monthly averages
 <br><br>
 5. Splitting the dataset into two reference periods:
 1941–1980 & 1981–2020 .
@@ -61,62 +71,110 @@ How has the mean temperature changed over 80 years?
 
 What is the long-term behavior of wind speed?
 
-Is solar irradiance decreasing or stable over time?
+How have temperature, wind speed, and solar radiation changed over time?
 
 How do monthly climatological patterns differ between 1941–1980 vs 1981–2020?
 
 Are there detectable seasonal trends?
 
-Three main analyses were conducted:
+The project includes:
 
 1.Annual Time Series (1941–2020)
 
-2.Seasonal / Monthly Climatology 
+2.Seasonal Comparison between historical periods.
 
-3.Long-term trends for TAS, WS, RSDS
+3.Climate indicators visualization.
 
-### Results:
+4.Long-term trends for TAS, WS, RSDS
 
-1. Air Temperature (TAS)
+### Seasonality Analysis
 
-Temperature increased from 21.25°C in 1943 to 24.8°C in 2020.
+Seasonal patterns were analyzed for all climate variables to understand how climate conditions change throughout the year.
+The analysis focuses on:
 
+# Air Temperature (TAS)
+Monthly temperature distribution.
+Comparison between 1941–1980 and 1981–2020.
+Identification of warming patterns across seasons.
+# Wind Speed (WS)
+Monthly wind variability.
+Seasonal peaks and low-wind periods.
+Changes between the two historical periods.
+# Surface Solar Radiation (RSDS)
+Seasonal behavior of solar radiation.
+Monthly differences across decades.
+Identification of periods with the highest solar potential.
+
+Questions explored:
+
+Which months experienced the strongest changes?
+Did seasonal patterns remain stable over time?
+Which variable shows the largest seasonal variation
+
+
+## Key Findings
+
+### 1. Air Temperature (TAS)
+
+- Temperature increased from **21.25°C in 1943** to **24.8°C in 2020**, indicating a clear warming trend across North Africa.
 
 <img width="600" height="300" alt="ta_plot" src="https://github.com/user-attachments/assets/89e22cb5-3def-49d7-9956-558e4c07bb20" />
 
+---
 
+### 2. Wind Speed (WS)
 
-2. Wind Speed (WS)
-
-Wind speeds range from 1.65 to 2.7 m/s over the entire period.
-
-Highest values occurred in 1943 and 2000; lowest in 1958 and 1962.
+- Wind speeds ranged from **1.65 to 2.7 m/s** over the study period.
+- The highest values occurred in **1943** and **2000**, while the lowest values were recorded in **1958** and **1962**.
 
 <img width="600" height="300" alt="ws_plot" src="https://github.com/user-attachments/assets/67bfee22-078a-4c55-ac30-ea442edb1229" />
 
+---
 
-3. Solar Irradiance (RSDS)
+### 3. Solar Irradiance (RSDS)
 
-Values range from 255.5 to 265 Wh/m² annually.
-
-Highest values in early 1940s, lowest in mid-1970s.
-
-Overall trend shows a slight decline over the 80-year period.
-
+- Annual solar irradiance ranged from **255.5 to 265 Wh/m²**.
+- The highest values occurred in the early **1940s**, while the lowest values were observed in the **mid-1970s**.
+- The overall trend shows a slight decline over the 80-year period.
 
 <img width="600" height="300" alt="ssrd_plot" src="https://github.com/user-attachments/assets/fd0d6dfb-7175-4995-bf41-83df2a9e942a" />
 
+---
 
-### conclusion:
+### 4. Monthly Temperature Climatology (TAS)
 
-This historical climate assessment reveals that:
+- Monthly temperatures were compared between **1941–1980** and **1981–2020**.
+- Temperatures increased across all months during the recent period.
+- Summer months (**June–August**) recorded the highest temperatures, while **January** and **February** remained the coolest months.
+- The largest increase occurred in **July**, reaching approximately **1°C**, whereas the smallest change was observed in **February**.
 
-Temperature shows a strong upward trend.
+*(Insert temperature seasonality figure here.)*
 
-Wind speed varies substantially, with increases in winter months.
+---
 
-Solar irradiance remains largely stable, showing only small long-term reductions.
+### 5. Monthly Wind Speed Climatology (WS)
 
-These findings highlight the importance of understanding long-term climate behavior in North Africa,
-especially in regions dependent on climate-sensitive sectors such as agriculture, water resources, and renewable energy.
+- Monthly wind speed patterns were analyzed to identify seasonal variability.
+- Wind speed showed only minor changes during summer months.
+- More pronounced changes were observed during winter.
+- The largest increase occurred in **October** and **December**, reaching approximately **0.2 m/s**.
 
+*(Insert wind seasonality figure here.)*
+
+---
+
+### 6. Monthly Solar Radiation Climatology (RSDS)
+
+- Solar radiation exhibited a clear seasonal cycle.
+- Peak values occurred between **May and July**, while the lowest values were observed during **December** and **January**.
+- Solar radiation patterns remained largely stable between the two periods.
+- Only a slight decrease was observed in **May**.
+
+*(Insert solar radiation seasonality figure here.)*
+
+
+## Conclusion
+
+Using 80 years of climate data, this project applied time-series analysis, seasonal comparisons, and data visualization to identify long-term trends in North Africa.
+
+The results show increasing temperatures, seasonal changes in wind speed, and relatively stable solar radiation patterns. These insights highlight the value of data analytics in understanding climate variability and supporting decisions in renewable energy and environmental planning.
