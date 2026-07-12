@@ -19,6 +19,7 @@ The project focuses on the three main meteorological variables that directly inf
 - Temperature T(°c)
 - Wind Speed (WS)
 - Surface Downwelling Shortwave Radiation (SSRD)
+
 The main objective is to understand how these variables evolved over eight decades and identify long-term trends and seasonal patterns using data analysis and visualization techniques.
 
 ### Data sources :
