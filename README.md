@@ -1,28 +1,15 @@
 # Data Analysis Climate Research
 
-## Table of contents
+## Table of Contents
 - [Project Overview](#project-overview)
-- [Data Sources](#data-sources)
-- [Tools](#tools)
-- [Data Cleaning / Preparation](#data-cleaning--preparation)
+- [Data Source](#data-source)
+- [Tech Stack](#tech-stack)
+- [Data Preparation](#data-preparation)
 - [Exploratory Data Analysis](#exploratory-data-analysis)
-- [Results / Findings](#results--findings)
-- [Recommendations](#recommendations)
-## Project Overview
+- [Seasonality Analysis](#seasonality-analysis)
+- [Key Findings](#key-findings)
+- [Conclusion](#conclusion)
 
-## Data Source
-
-## Tech Stack
-
-## Data Preparation
-
-## Exploratory Data Analysis
-
-## Seasonality Analysis
-
-## Key Findings
-
-## Conclusion
 
 ### Project Overview
 
